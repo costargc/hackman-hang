@@ -1,0 +1,162 @@
+
+.page-title {
+    font-family: 'Verdana';
+    font-weight: bold;
+    font-size: 4em;
+  }
+
+body {
+    background-color: black;
+    background-image: url("images/eye.gif"); 
+    background-size: 400px;
+    background-repeat:no-repeat;
+    background-attachment: fixed;
+    background-position: bottom left; 
+    color: white;
+
+    font-family: Lato;
+    text-align:center;
+  }
+
+  #pass_hidden{
+    text-align:center!important;
+    letter-spacing: 30px;
+    font-size: 50px;
+}
+
+.text-secondary{
+    color: greenyellow;
+}
+
+
+
+
+
+
+/* Glich code */
+.glitch {
+    color: white;
+    line-height: 1;
+  }
+  
+  .characters-container {
+    position: relative;
+      }
+  
+  .character {
+    display: inline-block;
+    position: relative;
+  }
+  
+  @keyframes glitch-animation-after {
+    0% {
+      clip: rect(65px, 600px, 39px, 0)
+    }
+    6.66667% {
+      clip: rect(19px, 600px, 21px, 0)
+    }
+    13.33333% {
+      clip: rect(80px, 600px, 51px, 0)
+    }
+    20% {
+      clip: rect(6px, 600px, 16px, 0)
+    }
+    26.66667% {
+      clip: rect(31px, 600px, 95px, 0)
+    }
+    33.33333% {
+      clip: rect(94px, 600px, 84px, 0)
+    }
+    40% {
+      clip: rect(84px, 600px, 74px, 0)
+    }
+    46.66667% {
+      clip: rect(97px, 600px, 55px, 0)
+    }
+    53.33333% {
+      clip: rect(7px, 600px, 18px, 0)
+    }
+    60% {
+      clip: rect(24px, 600px, 17px, 0)
+    }
+    66.66667% {
+      clip: rect(28px, 600px, 97px, 0)
+    }
+    73.33333% {
+      clip: rect(61px, 600px, 2px, 0)
+    }
+    80% {
+      clip: rect(0, 0, 0, 0)
+    }
+    100% {
+      clip: rect(0, 0, 0, 0)
+    }
+  }
+  
+  @keyframes glitch-animation-before {
+    0% {
+      clip: rect(86px, 600px, 98px, 0)
+    }
+    6.66667% {
+      clip: rect(62px, 600px, 92px, 0)
+    }
+    13.33333% {
+      clip: rect(91px, 600px, 20px, 0)
+    }
+    20% {
+      clip: rect(47px, 600px, 44px, 0)
+    }
+    26.66667% {
+      clip: rect(1px, 600px, 77px, 0)
+    }
+    33.33333% {
+      clip: rect(99px, 600px, 22px, 0)
+    }
+    40% {
+      clip: rect(44px, 600px, 12px, 0)
+    }
+    46.66667% {
+      clip: rect(71px, 600px, 65px, 0)
+    }
+    53.33333% {
+      clip: rect(52px, 600px, 28px, 0)
+    }
+    60% {
+      clip: rect(10px, 600px, 15px, 0)
+    }
+    66.66667% {
+      clip: rect(75px, 600px, 69px, 0)
+    }
+    73.33333% {
+      clip: rect(57px, 600px, 62px, 0)
+    }
+    80% {
+      clip: rect(0, 0, 0, 0)
+    }
+    100% {
+      clip: rect(0, 0, 0, 0)
+    }
+  }
+  
+  .glitch:before,
+  .glitch:after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(204, 57, 107, 0);
+    clip: rect(0, 0, 0, 0);
+  }
+  
+  .glitch:after {
+    left: 2px;
+    text-shadow: -5px 0 rgba(255, 51, 104, 0.5);
+    animation: glitch-animation-after 2s infinite linear alternate-reverse;
+  }
+  
+  .glitch:before {
+    left: -2px;
+    text-shadow: 5px 0 rgba(94, 38, 255, 0.5);
+    animation: glitch-animation-before 3s infinite linear alternate-reverse;
+  }
