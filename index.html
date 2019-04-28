@@ -20,13 +20,9 @@
     <header>
         <div class="row">
 
-            <div class="col-md-1"></div>
+            <div class="col-md-2"></div>
 
-            <div class="col-md-1">
-                <img src="images/skull.gif" alt="hack" height="80" width="100" onclick="hintme()">
-            </div>
-
-            <div class="col-md-9  align-self-center">
+            <div class="ng-view col-md-8">
                 <h1 class="page-title">
                     <div class="title-glitch-top">
                         <span class="glitch character" data-text="[">[</span>
@@ -39,11 +35,16 @@
                         <span class="glitch character" data-text="A">A</span>
                         <span class="glitch character" data-text="N">N</span>
                         <span class="glitch character" data-text="]">]</span>
+
+
+
                     </div>
                 </h1>
             </div>
 
-            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <img src="images/skull.gif" alt="hack" height="80" width="100" onclick="hintme()">
+            </div>
 
         </div>
     </header>
@@ -88,11 +89,11 @@
 
     <div class="row">
 
-        <div class="col-md-3">
+        <div class="col-md-3"></div>
 
-        </div>
         <div class="col-md-6">
             <h3>./attempts</h3>
+            <p>You have <a id="lives">10</a> attemps to find out what is the password. </p>
             <div id="buttons"></div>
         </div>
 
@@ -101,28 +102,14 @@
     </div>
 
 
-    <!-- <img src="images/retro.gif" alt="hack2" height="250" width="500"> -->
-
-
-
-    <!-- <div>
-        <h1 id="gameMessage">Congrats!</h1>
-    </div>
-
-    <img src="images/hack.gif" alt="hack1" height="350" width="350"> -->
 
     <div>
-        <h3>./attempts</h3>
- 
 
 
-    <p>You have <a id="lives">10</a> attemps to find out what is the password. </p>
 
+        <!-- <button onclick="hintme()">hintme()</button> -->
 
-    <button onclick="hintme()">hintme()</button>
-
-
-    <script src="app.js" charset="utf-u"></script>
+        <script src="app.js" charset="utf-u"></script>
 
 
 

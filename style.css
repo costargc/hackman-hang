@@ -12,17 +12,11 @@ body {
 }
 
 .page-title {
+    text-align: center!important;
     font-family: 'Verdana';
     font-weight: bold;
-    font-size: 4vw;
+    font-size: 5vw;
   }
-
-header{
-  margin-top:20px;
-  margin-bottom:0px;
-  padding: 0;
-  box-align: center;
-}
 
 h3{
   font-family: 'Verdana';
@@ -32,7 +26,20 @@ h3{
   padding: 0;
 }
 
+img{
+  margin-top:20px;
+  animation: rotation 15s infinite linear;
+}
 
+img:hover{
+  cursor:pointer;
+  opacity: 0.3;
+}
+
+@keyframes rotation {
+  from {transform: rotate(0deg);}
+to {transform: rotate(359deg);}
+}
 
 #pass_hidden{
   text-align:center!important;
@@ -72,7 +79,6 @@ button:disabled{
 /* Glich code */
 .glitch {
     color: white;
-    line-height: 1;
   }
   
   .characters-container {
