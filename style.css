@@ -1,4 +1,6 @@
-
+html {
+  text-align: center;
+}
 body {
   background-color: black;
   background-image: url("images/eye.gif"); 
@@ -9,7 +11,6 @@ body {
   color: white;
   font-family: Lato;
   text-align:center;
-
 }
 
 .page-title {
@@ -17,6 +18,7 @@ body {
     font-family: 'Verdana';
     font-weight: bold;
     font-size: 5vw;
+    margin-top: 20px;
   }
 
 h3{
@@ -83,6 +85,8 @@ button:disabled{
   body{
   /* background: lightcyan; */
   max-width:1230px!important;
+  text-align:center;
+  display:inline-block;
 }
 .page-title {
   text-align: center!important;
