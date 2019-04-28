@@ -2,6 +2,8 @@
 var userText = [];
 var wrongGuess = [];
 var lives = 10;
+var wins = 0;
+var losses = 0;
 var secret = [];
 var allpass = ["123123", "123456", "654321", "!@#$%", "1qaz2wsx", "aa123456", "abc123", "access", "admin", "ashley", "azerty", "bailey", "baseball", "batman", "charlie", "donald", "dragon", "flower", "football", "freedom", "hello", "hottie", "iloveyou", "jesus", "letmein", "login", "loveme", "master", "michael", "monkey", "mustang", "ninja", "passw0rd", "password", "password1", "princess", "qazwsx", "qwerty", "qwerty123", "qwertyuiop", "shadow", "solo", "starwars", "sunshine", "superman", "trustno1", "welcome", "whatever", "zaq1zaq1", "hangman", "costa"]
 // var allpass = ["qwertuiopasd"]
@@ -31,11 +33,12 @@ for (var i = 0; i < allowedchars.length; i++) {
 
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 document.onkeyup = function (event) {
+    if(secret.indexOf("*")>-1){
     userText = event.key;
     if (allowedchars.indexOf(userText) > -1) {
         clickme(userText);
     }
-}
+}}
 
 //this is where user can get help...
 
@@ -73,6 +76,23 @@ function clickme(userText) {
     }
     //I need to add a logic to disable a button
     document.getElementById('letter_' + userText).setAttribute("disabled", 'disabled');
+
+    //check if win or lose
+    if(secret.indexOf("*")==-1){
+        wins++;
+        for (var i = 0; i < allowedchars.length; i++) {
+            document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
+        }
+    }
+    else if(lives == 0){
+        losses++;
+        for (var i = 0; i < allowedchars.length; i++) {
+            document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
+        }
+    }
+    console.log(wins,losses);
+    //
+
     return true;
 }
 
