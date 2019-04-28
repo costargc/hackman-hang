@@ -9,6 +9,7 @@ body {
   color: white;
   font-family: Lato;
   text-align:center;
+
 }
 
 .page-title {
@@ -40,6 +41,7 @@ img:hover{
   from {transform: rotate(0deg);}
 to {transform: rotate(359deg);}
 }
+
 
 #pass_hidden{
   text-align:center!important;
@@ -73,6 +75,26 @@ button:disabled{
   background-color: gray;
   color: white;
   cursor: auto;
+}
+
+/* screen lock */
+
+@media screen and (min-width: 1230px){
+  body{
+  /* background: lightcyan; */
+  max-width:1230px!important;
+}
+.page-title {
+  text-align: center!important;
+  font-family: 'Verdana';
+  font-weight: bold;
+  font-size: 4em;
+}
+#pass_hidden{
+  text-align:center!important;
+  letter-spacing: 0.4em;
+  font-size: 4em;
+}
 }
 
 
