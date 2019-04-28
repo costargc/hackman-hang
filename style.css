@@ -34,10 +34,10 @@ h3{
 
 
 
-  #pass_hidden{
-    text-align:center!important;
-    letter-spacing: 30px;
-    font-size: 50px;
+#pass_hidden{
+  text-align:center!important;
+  letter-spacing: 2vw;
+  font-size: 5vw;
 }
 
 button{
