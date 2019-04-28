@@ -2,12 +2,7 @@
 var userText = [];
 var wrongGuess = [];
 var lives = 10;
-
-// lets define what i need
 var secret = [];
-
-
-// this are the passwords
 var allpass = ["123123", "123456", "654321", "!@#$%", "1qaz2wsx", "aa123456", "abc123", "access", "admin", "ashley", "azerty", "bailey", "baseball", "batman", "charlie", "donald", "dragon", "flower", "football", "freedom", "hello", "hottie", "iloveyou", "jesus", "letmein", "login", "loveme", "master", "michael", "monkey", "mustang", "ninja", "passw0rd", "password", "password1", "princess", "qazwsx", "qwerty", "qwerty123", "qwertyuiop", "shadow", "solo", "starwars", "sunshine", "superman", "trustno1", "welcome", "whatever", "zaq1zaq1", "hangman", "costa"]
 var allowedchars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "v", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "&", "?"]
 
@@ -21,6 +16,7 @@ for (var i = 0; i < randompass.length; i++) {
 // console.log(secret);
 document.getElementById("pass_hidden").textContent = secret.join('|');
 
+
 //create button
 for (var i = 0; i < allowedchars.length; i++) {
     var button = document.createElement("button");
@@ -31,16 +27,17 @@ for (var i = 0; i < allowedchars.length; i++) {
     document.getElementById('buttons').appendChild(button);
 }
 
+
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 document.onkeyup = function (event) {
     userText = event.key;
     if (allowedchars.indexOf(userText) > -1) {
         clickme(userText);
     }
-};
+}
 
 //this is where user can get help...
-var reveal;
+
 function hintme() {
     
     reveal = secret.indexOf('*');
@@ -76,4 +73,20 @@ function clickme(userText) {
     //I need to add a logic to disable a button
     document.getElementById('letter_' + userText).setAttribute("disabled", 'disabled');
     return true;
+}
+
+function playAgain(){
+    wrongGuess = [""];
+    lives = 10;
+    randompass = allpass[Math.floor(Math.random() * allpass.length)];
+    console.log(randompass);
+    secret=[];
+    for (var i = 0; i < randompass.length; i++) {
+        secret.push('*');
+    }
+    document.getElementById("pass_hidden").textContent = secret.join('|');
+    for (var i = 0; i < allowedchars.length; i++) {
+        document.getElementById('letter_' + allowedchars[i]).removeAttribute("disabled");
+    }
+    document.getElementById("lives").textContent = lives;
 }
