@@ -1,22 +1,38 @@
 
+body {
+  background-color: black;
+  background-image: url("images/eye.gif"); 
+  background-size: 400px;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background-position: bottom left; 
+  color: white;
+  font-family: Lato;
+  text-align:center;
+}
+
 .page-title {
     font-family: 'Verdana';
     font-weight: bold;
-    font-size: 4em;
+    font-size: 4vw;
   }
 
-body {
-    background-color: black;
-    background-image: url("images/eye.gif"); 
-    background-size: 400px;
-    background-repeat:no-repeat;
-    background-attachment: fixed;
-    background-position: bottom left; 
-    color: white;
+header{
+  margin-top:20px;
+  margin-bottom:0px;
+  padding: 0;
+  box-align: center;
+}
 
-    font-family: Lato;
-    text-align:center;
-  }
+h3{
+  font-family: 'Verdana';
+  font-size: 17px;
+  color: greenyellow;
+  margin-top:20px;
+  padding: 0;
+}
+
+
 
   #pass_hidden{
     text-align:center!important;
@@ -24,13 +40,33 @@ body {
     font-size: 50px;
 }
 
-.text-secondary{
-    color: greenyellow;
+button{
+  background-color: green;
+  color:white;
+  border: solid 1px green;
+  text-decoration:none;
+  cursor:pointer;
+  font-size:25px;
+  padding:2px 2px;
+  min-width:30px;
+  margin: 5px;
+  outline: none;
+
+}
+button:hover{
+  opacity: 0.3;
 }
 
+button:disabled:hover{
+  opacity: 1;
+}
 
-
-
+button:disabled{
+  border: 1px solid gray;
+  background-color: gray;
+  color: white;
+  cursor: auto;
+}
 
 
 /* Glich code */

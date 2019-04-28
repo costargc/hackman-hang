@@ -6,47 +6,104 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100&effect=neon">
+
+    <link href='https://fonts.googleapis.com/css?family=Lato:100&effect=neon' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Varela' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 
 <body>
+
     <header>
-        <h1 class="page-title">
-            <div class="title-glitch-top">
-                <span class="glitch character" data-text="[">[</span>
-                <span class="glitch character" data-text="H">H</span>
-                <span class="glitch character" data-text="A">A</span>
-                <span class="glitch character" data-text="C">C</span>
-                <span class="glitch character" data-text="K">K</span>
-                <span class="glitch character" data-text="-">-</span>
-                <span class="glitch character" data-text="M">M</span>
-                <span class="glitch character" data-text="A">A</span>
-                <span class="glitch character" data-text="N">N</span>
-                <span class="glitch character" data-text="]">]</span>
+        <div class="row">
+
+            <div class="col-md-1"></div>
+
+            <div class="col-md-1">
+                <img src="images/skull.gif" alt="hack" height="80" width="100" onclick="hintme()">
             </div>
-        </h1>
-        <h3 class="text-secondary">./a-cyberpunk-theme-hangman</h3>
+
+            <div class="col-md-9  align-self-center">
+                <h1 class="page-title">
+                    <div class="title-glitch-top">
+                        <span class="glitch character" data-text="[">[</span>
+                        <span class="glitch character" data-text="H">H</span>
+                        <span class="glitch character" data-text="A">A</span>
+                        <span class="glitch character" data-text="C">C</span>
+                        <span class="glitch character" data-text="K">K</span>
+                        <span class="glitch character" data-text="-">-</span>
+                        <span class="glitch character" data-text="M">M</span>
+                        <span class="glitch character" data-text="A">A</span>
+                        <span class="glitch character" data-text="N">N</span>
+                        <span class="glitch character" data-text="]">]</span>
+                    </div>
+                </h1>
+            </div>
+
+            <div class="col-md-1"></div>
+
+        </div>
     </header>
 
-    <!-- <img src="images/skull.gif" alt="hack1" height="150" width="150"> -->
+    <div class="container">
 
-    <div>
-        <p>The time to crack a password is related to bit strength. Most methods of password cracking require
-            the computer to produce many candidate passwords.
-            Luck you most people use some very common passwords... </p>
+        <div class="row">
 
-        <h3 class="text-secondary">./brute-force-cracking</h3>
+            <div class="col-md-3">
+
+            </div>
+
+            <div class="col-md-6">
+                <h3>./a-cyberpunk-theme-hangman</h3>
+
+                <p>The time to crack a password is related to bit strength. Most methods of password cracking require
+                    the computer to produce many candidate passwords.
+                    Luck you most people use some very common passwords... </p>
+            </div>
+
+            <div class="col-md-3"></div>
+
+        </div>
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            <h3>./brute-force-cracking <br>
+                @find-this-password </h3>
+            <div>
+                <h1 id="pass_hidden">*|*|*|*|*|*</h1>
+            </div>
+        </div>
+
+        <div class="col-md-2"></div>
 
     </div>
+
+    <div class="row">
+
+        <div class="col-md-3">
+
+        </div>
+        <div class="col-md-6">
+            <h3>./attempts</h3>
+            <div id="buttons"></div>
+        </div>
+
+        <div class="col-md-3"></div>
+
+    </div>
+
 
     <!-- <img src="images/retro.gif" alt="hack2" height="250" width="500"> -->
 
-    <div>
-        <h1 id="pass_hidden">*|*|*|*|*|*</h1>
-    </div>
+
 
     <!-- <div>
         <h1 id="gameMessage">Congrats!</h1>
@@ -55,16 +112,17 @@
     <img src="images/hack.gif" alt="hack1" height="350" width="350"> -->
 
     <div>
-        <h3 class="text-secondary">./attempts</h3>
-        <p id="pass_hidden"><span id="user-text">...</strong></span></p>
+        <h3>./attempts</h3>
+ 
 
 
-        <p>You have <a id="lives">10</a> attemps to find out what is the password. </p>
-    </div>
+    <p>You have <a id="lives">10</a> attemps to find out what is the password. </p>
+
 
     <button onclick="hintme()">hintme()</button>
 
-<script src="app.js" charset="utf-u"></script>
+
+    <script src="app.js" charset="utf-u"></script>
 
 
 
