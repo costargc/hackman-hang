@@ -1,17 +1,20 @@
 html {
   text-align: center;
+  display:inline-block;
 }
+
 body {
   background-color: black;
-  background-image: url("images/eye.gif"); 
-  background-size: 400px;
-  background-repeat:no-repeat;
-  background-attachment: fixed;
-  background-position: bottom left; 
+  background-image: url("images/eye.gif"), url(""); 
+  background-size: 400px,400px;
+  background-repeat:no-repeat,no-repeat;
+  background-attachment: fixed,fixed;
+  background-position: bottom left,bottom right; 
   color: white;
   font-family: Lato;
   text-align:center;
 }
+
 
 .page-title {
     text-align: center!important;
@@ -20,6 +23,13 @@ body {
     font-size: 5vw;
     margin-top: 20px;
   }
+
+  
+#pass_hidden{
+  text-align:center!important;
+  letter-spacing: 2vw;
+  font-size: 5vw;
+}
 
 h3{
   font-family: 'Verdana';
@@ -44,13 +54,6 @@ img:hover{
 to {transform: rotate(359deg);}
 }
 
-
-#pass_hidden{
-  text-align:center!important;
-  letter-spacing: 2vw;
-  font-size: 5vw;
-}
-
 button{
   background-color: green;
   color:white;
@@ -58,12 +61,16 @@ button{
   text-decoration:none;
   cursor:pointer;
   font-size:25px;
-  padding:2px 2px;
+  padding:2px 2px 2px 2px;
   min-width:30px;
-  margin: 5px;
+  height:40px;
+  margin: 5px 5px 5px 5px;
   outline: none;
-
+  /* vertical-align: center; */
+  padding-top: 0px;
+  border-radius: 3px;
 }
+
 button:hover{
   opacity: 0.3;
 }

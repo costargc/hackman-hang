@@ -31,7 +31,6 @@ for (var i = 0; i < allowedchars.length; i++) {
     document.getElementById('buttons').appendChild(button);
 }
 
-
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 document.onkeyup = function (event) {
     userText = event.key;
