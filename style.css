@@ -27,7 +27,7 @@ body {
   
 #pass_hidden{
   text-align:center!important;
-  letter-spacing: 2vw;
+  letter-spacing: 1.5vw;
   font-size: 5vw;
 }
 
@@ -104,7 +104,7 @@ button:disabled{
 #pass_hidden{
   text-align:center!important;
   letter-spacing: 0.4em;
-  font-size: 4em;
+  font-size: 3.5em;
 }
 }
 
