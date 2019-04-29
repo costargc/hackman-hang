@@ -12,7 +12,16 @@ var allowedchars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 
 //choose at random
 randompass = allpass[Math.floor(Math.random() * allpass.length)]
-console.log(randompass);
+// console.log(randompass);
+console.log("      _.--,_");
+console.log("   .-'      '-.");
+console.log("  /            \\ ");
+console.log(" '          _.  '");
+console.log(" \\      ** /  ~(");
+console.log("  '=,,_ =\\__ `  &");
+console.log("        *  *'; \\\\\\ ");
+console.log("["+randompass+"]");
+//
 
 for (var i = 0; i < randompass.length; i++) {
     secret.push('*');
