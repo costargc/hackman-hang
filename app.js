@@ -93,7 +93,7 @@ function clickme(userText) {
         }
     }
     //
-    console.log(wins,losses);
+    // console.log(wins,losses);
     document.getElementById("wins").textContent = wins;
     document.getElementById("losses").textContent = losses;
     return true;
