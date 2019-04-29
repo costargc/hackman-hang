@@ -11,8 +11,8 @@ Most methods of password cracking require the computer to produce many candidate
 ## TO DO
 
 - [x] change console.log() to show an ascii-art instead of the password directly
+- [x] add favicon.icon to html
 - [ ] delete images not being used
-- [ ] add favicon.icon to html
 - [ ] add to css instead of html >> class="col-2 border border-success "style="min-width: 100px;"
 - [ ] sign page
 - [ ] add a better way to tell people when they won/lose the game
