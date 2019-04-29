@@ -92,9 +92,10 @@ function clickme(userText) {
             document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
         }
     }
-    console.log(wins,losses);
     //
-
+    console.log(wins,losses);
+    document.getElementById("wins").textContent = wins;
+    document.getElementById("losses").textContent = losses;
     return true;
 }
 
