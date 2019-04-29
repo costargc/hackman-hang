@@ -104,6 +104,10 @@ function clickme(userText) {
         for (var i = 0; i < allowedchars.length; i++) {
             document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
         }
+        for (var i = 0; i < randompass.length; i++) {
+            secret[i]=randompass[i];
+        }
+        document.getElementById("pass_hidden").textContent = secret.join('|');
     }
     //
     // console.log(wins,losses);
