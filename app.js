@@ -13,15 +13,18 @@ var allowedchars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 //choose at random
 randompass = allpass[Math.floor(Math.random() * allpass.length)]
 // console.log(randompass);
-console.log("      _.--,_");
-console.log("   .-'      '-.");
-console.log("  /            \\ ");
-console.log(" '          _.  '");
-console.log(" \\      ** /  ~(");
-console.log("  '=,,_ =\\__ `  &");
-console.log("        *  *'; \\\\\\ ");
-console.log("["+randompass+"]");
-//
+printskull();
+
+function printskull() {
+    console.log("      _.--,_");
+    console.log("   .-'      '-.");
+    console.log("  /            \\\\ ");
+    console.log(" '          _.  '");
+    console.log(" \\      ** /  ~(");
+    console.log("  '=,,_ =\\__ `  &");
+    console.log("        *  *'; \\\\\\ ");
+    console.log("[" + randompass + "]");
+}
 
 for (var i = 0; i < randompass.length; i++) {
     secret.push('*');
@@ -42,22 +45,23 @@ for (var i = 0; i < allowedchars.length; i++) {
 
 // Next, we give JavaScript a function to execute when onkeyup event fires.
 document.onkeyup = function (event) {
-    if(secret.indexOf("*")>-1){
-    userText = event.key;
-    if (allowedchars.indexOf(userText) > -1 && lives > 0) {
-        clickme(userText);
+    if (secret.indexOf("*") > -1) {
+        userText = event.key;
+        if (allowedchars.indexOf(userText) > -1 && lives > 0) {
+            clickme(userText);
+        }
     }
-}}
+}
 
 //this is where user can get help...
 
 function hintme() {
-    hint=true;
+    hint = true;
     reveal = secret.indexOf('*');
-    if(reveal>-1){
-    clickme(randompass[reveal]);
+    if (reveal > -1) {
+        clickme(randompass[reveal]);
     }
-    hint=false;
+    hint = false;
     return true;
 }
 
@@ -89,13 +93,13 @@ function clickme(userText) {
     document.getElementById('letter_' + userText).setAttribute("disabled", 'disabled');
 
     //check if win or lose
-    if(secret.indexOf("*")==-1 && lives > 0){
+    if (secret.indexOf("*") == -1 && lives > 0) {
         wins++;
         for (var i = 0; i < allowedchars.length; i++) {
             document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
         }
     }
-    if(lives == 0 && secret.indexOf("*")>-1 && hint == false){
+    if (lives == 0 && secret.indexOf("*") > -1 && hint == false) {
         losses++;
         for (var i = 0; i < allowedchars.length; i++) {
             document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
@@ -108,12 +112,13 @@ function clickme(userText) {
     return true;
 }
 
-function playAgain(){
+function playAgain() {
     wrongGuess = [""];
     lives = 10;
     randompass = allpass[Math.floor(Math.random() * allpass.length)];
-    console.log(randompass);
-    secret=[];
+    //console.log(randompass);
+    printskull();
+    secret = [];
     for (var i = 0; i < randompass.length; i++) {
         secret.push('*');
     }
