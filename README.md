@@ -25,4 +25,4 @@ Most methods of password cracking require the computer to produce many candidate
 
 ## BUG
 
-- [ ] ```.onclick = function(){ clickme(allowedchars[i])};``` inside for loop not workin. Workaround is to use ```.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');``` for now
+- [x] ```.onclick = function(){ clickme(allowedchars[i])};``` inside for loop not workin. Workaround is to use ```.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');``` for now
