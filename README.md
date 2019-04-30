@@ -22,3 +22,7 @@ Most methods of password cracking require the computer to produce many candidate
 - [ ] add a better way to tell people when they won/lose the game
 - [ ] update page in codepen.io
 - [ ] 'allowedchars' and 'allpass' array to be read from txt file
+
+## BUG
+
+- [ ] ```.onclick = function(){ clickme(allowedchars[i])};``` inside for loop not workin. Workaround is to use ```.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');``` for now
