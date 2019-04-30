@@ -39,13 +39,14 @@ for (var i = 0; i < allowedchars.length; i++) {
     button.setAttribute("class","letter");
     button.setAttribute("id","letter_" + allowedchars[i]);
     document.getElementById('buttons').appendChild(button);
+    //onclick in html trick...
     button.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');
     // document.getElementById("letter_"+allowedchars[i]).onclick = function(){ clickme(allowedchars[i])};
 }
 
-//bad implementation... but don't need to use "onclick in html anymore"
 document.getElementById("playAgain").onclick = function(){ playAgain()};
 
+//bad implementation... but don't need to use "onclick in html anymore"
 // document.getElementById("letter_a").onclick = function(){ clickme("a")};
 // document.getElementById("letter_b").onclick = function(){ clickme("b")};
 // document.getElementById("letter_c").onclick = function(){ clickme("c")};
