@@ -48,6 +48,7 @@ for (var i = 0; i < allowedchars.length; i++) {
 }
 
 document.getElementById("playAgain").onclick = function(){ playAgain()};
+document.getElementById("hackhack").onclick = function(){ hintme()};
 
 //bad implementation... but don't need to use "onclick in html anymore"
 // document.getElementById("letter_a").onclick = function(){ clickme("a")};
