@@ -39,8 +39,11 @@ for (var i = 0; i < allowedchars.length; i++) {
     button.setAttribute("class","letter");
     button.setAttribute("id","letter_" + allowedchars[i]);
     document.getElementById('buttons').appendChild(button);
-    //onclick in html trick...
+    
+    //onclick in html trick...works!
     button.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');
+    
+    //will not work!
     // document.getElementById("letter_"+allowedchars[i]).onclick = function(){ clickme(allowedchars[i])};
 }
 
