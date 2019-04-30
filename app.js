@@ -35,9 +35,9 @@ document.getElementById("pass_hidden").textContent = secret.join('|');
 //create button
 for (var i = 0; i < allowedchars.length; i++) {
     var button = document.createElement("button");
-    button.innerHTML = allowedchars[i];
+    button.textContent = allowedchars[i];
     button.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');
-    button.classList.add("letter");
+    button.setAttribute("class","letter");
     button.id = "letter_" + allowedchars[i];
     document.getElementById('buttons').appendChild(button);
 }
