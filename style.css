@@ -1,6 +1,6 @@
 html {
   text-align: center;
-  display:inline-block;
+  display: inline;
 }
 
 body {
@@ -89,7 +89,7 @@ button:disabled{
   /* background: lightcyan; */
   max-width:1230px!important;
   text-align:center;
-  display:inline-block;
+  display: inline;
 }
 .page-title {
   text-align: center!important;
