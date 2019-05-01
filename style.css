@@ -41,6 +41,11 @@ h3{
   padding: 0;
 }
 
+#lives{
+  color: greenyellow;
+  font-family: 'Verdana';
+}
+
 img{
   margin-top:20px;
   animation: rotation 15s infinite linear;
