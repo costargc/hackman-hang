@@ -16,10 +16,10 @@ Most methods of password cracking require the computer to produce many candidate
 - [x] add favicon.icon to html
 - [x] show full password when lives end
 - [x] remove onclick from html and add it do DOM in js >> ```document.getElementById("ID").onclick = function () { clickme() };```
-- [ ] delete images not being used
-- [ ] add to css instead of html >> ```class="col-2 border border-success "style="min-width: 100px;"```
+- [x] add to css instead of html >> ```class="col-2 border border-success" style="min-width: 100px;"```
 - [ ] sign page
 - [ ] add a better way to tell people when they won/lose the game
+- [ ] delete images not being used
 - [ ] update page in codepen.io
 - [ ] 'allowedchars' and 'allpass' array to be read from txt file
 

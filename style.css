@@ -23,6 +23,9 @@ body {
     margin-top: 20px;
   }
 
+#scoreboard{
+  min-width: 100px;
+}
   
 #pass_hidden{
   text-align:center!important;

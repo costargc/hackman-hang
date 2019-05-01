@@ -44,7 +44,7 @@ for (var i = 0; i < allowedchars.length; i++) {
     // button.setAttribute('onclick', 'clickme("' + allowedchars[i] + '")');
 
     //solution without the onclick
-    document.getElementById("letter_"+allowedchars[i]).onclick = getClickCallback(allowedchars[i]);
+    document.getElementById("letter_" + allowedchars[i]).onclick = getClickCallback(allowedchars[i]);
 }
 
 document.getElementById("playAgain").onclick = function () { playAgain() };
