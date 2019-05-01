@@ -23,11 +23,6 @@ body {
     margin-top: 10px;
   }
 
-#scoreboard{
-  min-width: 100px;
-  background-color: black;
-}
-
 #signature{
   color: greenyellow;
   font-family: 'Verdana';
@@ -124,6 +119,44 @@ button:disabled{
 }
 }
 
+/* Scoreboard animation */
+#title_w{
+  min-width: 100px;
+  background-color: black;
+  /* border-color: red!important; */
+}
+#title_w_glow{
+  min-width: 100px;
+  background-color: darkgreen;
+  /* border-color: red!important; */
+}
+#scoreboard_w{
+  min-width: 100px;
+  background-color: black;
+  /* border-color: red!important; */
+}
+#scoreboard_w_glow{
+  min-width: 100px;
+  background-color: darkgreen;
+  /* border-color: red!important; */
+}
+
+#title_l{
+  min-width: 100px;
+  background-color: black;
+}
+#title_l_glow{
+  min-width: 100px;
+  background-color: darkred;
+}
+#scoreboard_l{
+  min-width: 100px;
+  background-color: black;
+}
+#scoreboard_l_glow{
+  min-width: 100px;
+  background-color: darkred;
+}
 
 /* Glich code */
 .glitch {

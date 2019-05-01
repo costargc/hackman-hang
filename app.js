@@ -107,28 +107,46 @@ function clickme(userText) {
     document.getElementById('letter_' + userText).setAttribute("disabled", "disabled");
 
     //check if win or lose
+    checkwin();
+    return true;
+}
+
+
+function checkwin() {
     if (secret.indexOf("*") == -1 && lives > 0) {
-        wins++;
         for (var i = 0; i < allowedchars.length; i++) {
             document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
         }
+        wins++;
+        document.getElementById("wins").textContent = wins;
+        // glow effect win
+        document.getElementById("title_w").setAttribute("id","title_w_glow");
+        document.getElementById("scoreboard_w").setAttribute("id","scoreboard_w_glow");
+        setTimeout(function() {
+            document.getElementById("title_w_glow").setAttribute("id","title_w");
+            document.getElementById("scoreboard_w_glow").setAttribute("id","scoreboard_w");
+        },700);
     }
     if (lives == 0 && secret.indexOf("*") > -1 && hint == false) {
-        losses++;
         for (var i = 0; i < allowedchars.length; i++) {
             document.getElementById('letter_' + allowedchars[i]).setAttribute("disabled", 'disabled');
         }
         for (var i = 0; i < randompass.length; i++) {
             secret[i] = randompass[i];
         }
+        losses++;
         document.getElementById("pass_hidden").textContent = secret.join('|');
+        document.getElementById("losses").textContent = losses;
+        // glow effect win
+        document.getElementById("title_l").setAttribute("id","title_l_glow");
+        document.getElementById("scoreboard_l").setAttribute("id","scoreboard_l_glow");
+        setTimeout(function() {
+            document.getElementById("title_l_glow").setAttribute("id","title_l");
+            document.getElementById("scoreboard_l_glow").setAttribute("id","scoreboard_l");
+        },700);
     }
-    //
-    // console.log(wins,losses);
-    document.getElementById("wins").textContent = wins;
-    document.getElementById("losses").textContent = losses;
-    return true;
 }
+
 
 function playAgain() {
     wrongGuess = [""];
