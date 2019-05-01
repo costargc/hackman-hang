@@ -19,6 +19,9 @@ Most methods of password cracking require the computer to produce many candidate
 - [x] add to css instead of html >> ```class="col-2 border border-success" style="min-width: 100px;"```
 - [x] sign page
 - [x] update page in codepen.io
+
+## TO DO (extra)
+
 - [ ] add a better way to tell people when they won/lose the game
 - [ ] delete images not being used
 - [ ] 'allowedchars' and 'allpass' array to be read from txt file
