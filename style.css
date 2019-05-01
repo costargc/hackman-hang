@@ -27,6 +27,18 @@ body {
   min-width: 100px;
   background-color: black;
 }
+
+#signature{
+  color: greenyellow;
+  font-family: 'Verdana';
+  font-size: 10px;
+
+}
+
+#signature:hover{
+  opacity: 0.3;
+  text-decoration: none;
+}
   
 #pass_hidden{
   text-align:center!important;
