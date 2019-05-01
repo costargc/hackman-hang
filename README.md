@@ -22,8 +22,8 @@ Most methods of password cracking require the computer to produce many candidate
 
 ## TO DO (extra)
 
-- [ ] add a better way to tell people when they won/lose the game
-- [ ] delete images not being used
+- [x] add a better way to tell people when they won/lose the game
+- [x] delete images not being used
 - [ ] 'allowedchars' and 'allpass' array to be read from txt file
 
 ## BUG
