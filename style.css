@@ -1,7 +1,7 @@
 html {
   text-align: center;
   display: inline;
-  overflow:hidden;
+  overflow-x: hidden;
 }
 
 body {
@@ -110,7 +110,7 @@ button:disabled{
     max-width:1200px!important;
     text-align:center;
     display: inline;
-    overflow:hidden;
+    overflow-x:hidden;
   }
   .page-title {
     text-align: center!important;
