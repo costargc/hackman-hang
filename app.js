@@ -6,7 +6,59 @@ var wins = 0;
 var hint = false;
 var losses = 0;
 var secret = [];
-var allpass = ["123123", "123456", "654321", "!@#$%", "1qaz2wsx", "aa123456", "abc123", "access", "admin", "ashley", "azerty", "bailey", "baseball", "batman", "charlie", "donald", "dragon", "flower", "football", "freedom", "hello", "hottie", "iloveyou", "jesus", "letmein", "login", "loveme", "master", "michael", "monkey", "mustang", "ninja", "passw0rd", "password", "password1", "princess", "qazwsx", "qwerty", "qwerty123", "qwertyuiop", "shadow", "solo", "starwars", "sunshine", "superman", "trustno1", "welcome", "whatever", "zaq1zaq1", "hangman", "costa"]
+var allpass = [
+    "123123",
+    "123456",
+    "654321",
+    "!@#$%",
+    "1qaz2wsx",
+    "aa123456",
+    "abc123",
+    "access",
+    "admin",
+    "ashley",
+    "azerty",
+    "bailey",
+    "baseball",
+    "batman",
+    "charlie",
+    "donald",
+    "dragon",
+    "flower",
+    "football",
+    "freedom",
+    "hello",
+    "hottie",
+    "iloveyou",
+    "jesus",
+    "letmein",
+    "login",
+    "loveme",
+    "master",
+    "michael",
+    "monkey",
+    "mustang",
+    "ninja",
+    "passw0rd",
+    "password",
+    "password1",
+    "princess",
+    "qazwsx",
+    "qwerty",
+    "qwerty123",
+    "qwertyuiop",
+    "shadow",
+    "solo",
+    "starwars",
+    "sunshine",
+    "superman",
+    "trustno1",
+    "welcome",
+    "whatever",
+    "zaq1zaq1",
+    "hangman",
+    "costa"
+]
 // var allpass = ["qwertuiopasd"]
 var allowedchars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "v", "x", "y", "z", "1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "!", "@", "#", "$", "%", "&", "?"]
 
@@ -120,12 +172,12 @@ function checkwin() {
         wins++;
         document.getElementById("wins").textContent = wins;
         // glow effect win
-        document.getElementById("title_w").setAttribute("id","title_w_glow");
-        document.getElementById("scoreboard_w").setAttribute("id","scoreboard_w_glow");
-        setTimeout(function() {
-            document.getElementById("title_w_glow").setAttribute("id","title_w");
-            document.getElementById("scoreboard_w_glow").setAttribute("id","scoreboard_w");
-        },700);
+        document.getElementById("title_w").setAttribute("id", "title_w_glow");
+        document.getElementById("scoreboard_w").setAttribute("id", "scoreboard_w_glow");
+        setTimeout(function () {
+            document.getElementById("title_w_glow").setAttribute("id", "title_w");
+            document.getElementById("scoreboard_w_glow").setAttribute("id", "scoreboard_w");
+        }, 700);
     }
     if (lives == 0 && secret.indexOf("*") > -1 && hint == false) {
         for (var i = 0; i < allowedchars.length; i++) {
@@ -138,12 +190,12 @@ function checkwin() {
         document.getElementById("pass_hidden").textContent = secret.join('|');
         document.getElementById("losses").textContent = losses;
         // glow effect win
-        document.getElementById("title_l").setAttribute("id","title_l_glow");
-        document.getElementById("scoreboard_l").setAttribute("id","scoreboard_l_glow");
-        setTimeout(function() {
-            document.getElementById("title_l_glow").setAttribute("id","title_l");
-            document.getElementById("scoreboard_l_glow").setAttribute("id","scoreboard_l");
-        },700);
+        document.getElementById("title_l").setAttribute("id", "title_l_glow");
+        document.getElementById("scoreboard_l").setAttribute("id", "scoreboard_l_glow");
+        setTimeout(function () {
+            document.getElementById("title_l_glow").setAttribute("id", "title_l");
+            document.getElementById("scoreboard_l_glow").setAttribute("id", "scoreboard_l");
+        }, 700);
     }
 }
 
