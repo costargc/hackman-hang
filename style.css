@@ -1,6 +1,7 @@
 html {
   text-align: center;
   display: inline;
+  overflow:hidden;
 }
 
 body {
@@ -103,24 +104,25 @@ button:disabled{
 
 /* screen lock */
 
-@media screen and (min-width: 1230px){
-  body{
-  /* background: lightcyan; */
-  max-width:1230px!important;
-  text-align:center;
-  display: inline;
-}
-.page-title {
-  text-align: center!important;
-  font-family: 'Verdana';
-  font-weight: bold;
-  font-size: 4em;
-}
-#pass_hidden{
-  text-align:center!important;
-  letter-spacing: 0.4em;
-  font-size: 3.5em;
-}
+@media screen and (min-width: 1199px){
+    body{
+    /* background: lightcyan; */
+    max-width:1200px!important;
+    text-align:center;
+    display: inline;
+    overflow:hidden;
+  }
+  .page-title {
+    text-align: center!important;
+    font-family: 'Verdana';
+    font-weight: bold;
+    font-size: 4em;
+  }
+  #pass_hidden{
+    text-align:center!important;
+    letter-spacing: 0.4em;
+    font-size: 3.5em;
+  }
 }
 
 /* Scoreboard animation */
