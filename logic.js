@@ -14,7 +14,7 @@ myRound.round.puzzleState = secret;
 //build html
 console.clear();
 printskull(randomgameWord);
-document.getElementById("puzzle-state").textContent = secret.join(' ');
+document.getElementById("puzzle-state").innerHTML = replaceText(secret.join(' '));
 document.getElementById("playAgain").onclick = function () { playAgain() };
 document.getElementById("hackhack").onclick = function () { hintme(secret) };
 document.getElementById("guesses-left").textContent = myRound.guessesLeft;
@@ -48,6 +48,10 @@ document.onkeyup = function (event) {
 
 
 // functions
+
+function replaceText(text) {
+    return text.replace(/_/g, '&#8727;');
+}
 
 function showsecret() {
     for (i = 0; i < secret.length; i++) {
@@ -89,7 +93,7 @@ function playAgain() {
 
     console.clear();
     printskull(randomgameWord);
-    document.getElementById("puzzle-state").textContent = secret.join(' ');
+    document.getElementById("puzzle-state").innerHTML = replaceText(secret.join(' '));
     document.getElementById("guesses-left").textContent = myRound.guessesLeft;
 
     //clean start
@@ -142,7 +146,7 @@ function clickme(letter) {
     endofround = isEndOfRound(myRound); //console.log(endofround);
 
     startmyRound = startNewRound_fix(myRound);
-    document.getElementById("puzzle-state").textContent = secret.join(' ');
+    document.getElementById("puzzle-state").innerHTML = replaceText(secret.join(' '));
 
 }
 
@@ -225,13 +229,7 @@ function startNewRound_fix(testGame_obj) {
     if (testGame_obj.round.puzzleState.indexOf("_") == -1 && testGame_obj.round.guessesLeft > 0) {
         testGame_obj.wins++;
         document.getElementById("wins").textContent = testGame_obj.wins;
-        // glow effect win
-        document.getElementById("title_w").setAttribute("id", "title_w_glow");
-        document.getElementById("scoreboard_w").setAttribute("id", "scoreboard_w_glow");
-        setTimeout(function () {
-            document.getElementById("title_w_glow").setAttribute("id", "title_w");
-            document.getElementById("scoreboard_w_glow").setAttribute("id", "scoreboard_w");
-        }, 700);
+        glowMe("wins");
 
         // alert("winner winner chicken dinner \n\"" + testGame_obj.word + "\"");
         //console.log("win game");
@@ -241,13 +239,7 @@ function startNewRound_fix(testGame_obj) {
     else if (testGame_obj.round.puzzleState.indexOf("_") > -1 && testGame_obj.round.guessesLeft == 0) {
         testGame_obj.losses++;
         document.getElementById("losses").textContent = testGame_obj.losses;
-        // glow effect win
-        document.getElementById("title_l").setAttribute("id", "title_l_glow");
-        document.getElementById("scoreboard_l").setAttribute("id", "scoreboard_l_glow");
-        setTimeout(function () {
-            document.getElementById("title_l_glow").setAttribute("id", "title_l");
-            document.getElementById("scoreboard_l_glow").setAttribute("id", "scoreboard_l");
-        }, 700);
+        glowMe("losses");
 
         // alert("loser, loser, now who is dinner? \n\"" + testGame_obj.word + "\"");
         //console.log("lose game");
@@ -256,6 +248,27 @@ function startNewRound_fix(testGame_obj) {
         showsecret();
         buttonEnd();
         return false;
+    }
+}
+
+function glowMe(status) {
+    if (status == "losses") {
+        // glow effect win
+        document.getElementById("title_l").setAttribute("id", "title_l_glow");
+        document.getElementById("scoreboard_l").setAttribute("id", "scoreboard_l_glow");
+        setTimeout(function () {
+            document.getElementById("title_l_glow").setAttribute("id", "title_l");
+            document.getElementById("scoreboard_l_glow").setAttribute("id", "scoreboard_l");
+        }, 700);
+    }
+    else if (status == "wins") {
+        // glow effect win
+        document.getElementById("title_w").setAttribute("id", "title_w_glow");
+        document.getElementById("scoreboard_w").setAttribute("id", "scoreboard_w_glow");
+        setTimeout(function () {
+            document.getElementById("title_w_glow").setAttribute("id", "title_w");
+            document.getElementById("scoreboard_w_glow").setAttribute("id", "scoreboard_w");
+        }, 700);
     }
 }
 
