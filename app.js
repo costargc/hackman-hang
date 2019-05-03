@@ -65,6 +65,7 @@ var allowedchars = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", 
 //choose at random
 randompass = allpass[Math.floor(Math.random() * allpass.length)]
 // console.log(randompass);
+
 printskull();
 
 function printskull() {
@@ -205,6 +206,7 @@ function playAgain() {
     lives = 10;
     randompass = allpass[Math.floor(Math.random() * allpass.length)];
     //console.log(randompass);
+    console.clear();
     printskull();
     secret = [];
     for (var i = 0; i < randompass.length; i++) {
