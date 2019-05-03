@@ -1,5 +1,3 @@
-# Word Guess Game (Browser)
-
 # hackman-hang
 
 A cyberpunk theme hangman game.
