@@ -15,6 +15,10 @@ html {
     font-family: Lato;
     text-align:center;
   }
+
+  p{
+    background-color: black;
+  }
   
   .page-title {
       text-align: center!important;
