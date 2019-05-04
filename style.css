@@ -135,12 +135,12 @@ html {
     background-color: darkgreen;
     /* border-color: red!important; */
   }
-  #scoreboard_w{
+  #win-counter{
     min-width: 100px;
     background-color: black;
     /* border-color: red!important; */
   }
-  #scoreboard_w_glow{
+  #win-counter_glow{
     min-width: 100px;
     background-color: darkgreen;
     /* border-color: red!important; */
@@ -154,11 +154,11 @@ html {
     min-width: 100px;
     background-color: darkred;
   }
-  #scoreboard_l{
+  #loss-counter{
     min-width: 100px;
     background-color: black;
   }
-  #scoreboard_l_glow{
+  #loss-counter_glow{
     min-width: 100px;
     background-color: darkred;
   }
